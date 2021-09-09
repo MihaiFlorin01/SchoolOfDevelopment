@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SchoolOf.Dtos/1.0.0": {
+        "runtime": {
+          "SchoolOf.Dtos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SchoolOf.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

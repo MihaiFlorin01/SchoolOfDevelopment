@@ -1,0 +1,12 @@
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\bin\Debug\net5.0\SchoolOf.Dtos.deps.json
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\bin\Debug\net5.0\SchoolOf.Dtos.dll
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\bin\Debug\net5.0\ref\SchoolOf.Dtos.dll
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\bin\Debug\net5.0\SchoolOf.Dtos.pdb
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.csproj.AssemblyReference.cache
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.AssemblyInfoInputs.cache
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.AssemblyInfo.cs
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.dll
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\ref\SchoolOf.Dtos.dll
+C:\Users\Florin\source\repos\simple-shopping-cart\SchoolOf.ShoppingCart\SchoolOf.Dtos\obj\Debug\net5.0\SchoolOf.Dtos.pdb

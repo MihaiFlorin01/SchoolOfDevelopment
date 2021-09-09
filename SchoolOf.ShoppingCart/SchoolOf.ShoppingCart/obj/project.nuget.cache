@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cvBv5gOlRHtmimMW17Kt0VgvI6+Bjy0X+0yposB76MCtbUateS7koNunpYcA1YpgEipzJL2OMn0EDbBc7GKQfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Florin\\source\\repos\\simple-shopping-cart\\SchoolOf.ShoppingCart\\SchoolOf.ShoppingCart\\SchoolOf.ShoppingCart.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Florin\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Florin\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Florin\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Florin\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Florin\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Florin\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
