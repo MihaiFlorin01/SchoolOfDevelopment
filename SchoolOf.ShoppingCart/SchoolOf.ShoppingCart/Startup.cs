@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SchoolOf.Common.DatabaseSettings;
+using SchoolOf.Data;
+using SchoolOf.Data.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +35,12 @@ namespace SchoolOf.ShoppingCart
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SchoolOf.ShoppingCart", Version = "v1" });
             });
+
+            services.AddScoped<DatabaseContext>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.Configure<DbSettings>(Configuration.GetSection(nameof(DbSettings)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

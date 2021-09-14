@@ -5,10 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SchoolOf.Data.Abstraction\SchoolOf.Data.Abstraction.csproj" />
+    <ProjectReference Include="..\SchoolOf.Data.Models\SchoolOf.Data.Models.csproj" />
+    <ProjectReference Include="..\SchoolOf.Data\SchoolOf.Data.csproj" />
     <ProjectReference Include="..\SchoolOf.Dtos\SchoolOf.Dtos.csproj" />
   </ItemGroup>
 
