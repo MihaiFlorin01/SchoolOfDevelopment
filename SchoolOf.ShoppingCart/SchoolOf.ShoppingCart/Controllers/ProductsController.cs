@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using SchoolOf.Common.Exceptions;
 using SchoolOf.Data.Abstraction;
 using SchoolOf.Data.Models;
 using SchoolOf.Dtos;
@@ -14,19 +16,22 @@ namespace SchoolOf.ShoppingCart.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-
-        public ProductsController(IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public ProductsController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this._unitOfWork = unitOfWork;
+            this._mapper = mapper;
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<ProductDto>), 200)]
-        public async Task<IActionResult> GetProducts(int pageNumber, int pageSize)
+        public async Task<IActionResult> GetProducts()
         {
+            //throw new System.Exception();
+
             var myListOfProducts = new List<ProductDto>();
             var productsFromDb = this._unitOfWork.GetRepository<Product>().Find(product => !product.IsDeleted);
-        
+
             foreach (var p in productsFromDb)
             {
                 myListOfProducts.Add(new ProductDto
@@ -40,7 +45,26 @@ namespace SchoolOf.ShoppingCart.Controllers
                 });
             }
 
-            var productsFromPage = myListOfProducts.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            return Ok(myListOfProducts);
+        }
+
+        [HttpGet]
+        [Route("{pageNumber}/{pageSize}")]
+        [ProducesResponseType(typeof(IEnumerable<ProductDto>), 200)]
+        public async Task<IActionResult> GetPaginatedProducts(int pageNumber = 1, int pageSize = 10)
+        {
+            if (pageNumber < 1)
+            {
+                throw new InvalidParameterException(pageNumber);
+            }
+            if (pageSize < 0)
+            {
+                throw new InvalidParameterException(pageSize);
+            }
+
+            var productsFromDb = this._unitOfWork.GetRepository<Product>().Find(product => !product.IsDeleted, (pageNumber - 1) * pageSize, pageSize);
+
+            var myListOfProducts = _mapper.Map<List<ProductDto>>(productsFromDb);
 
             return Ok(myListOfProducts);
         }

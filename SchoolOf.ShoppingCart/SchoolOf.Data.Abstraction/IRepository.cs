@@ -17,5 +17,7 @@ namespace SchoolOf.Data.Abstraction
         T Update(T entity);
 
         IEnumerable<T> Find(Func<T, bool> searchCriteria);
+
+        IEnumerable<T> Find(Func<T, bool> searchCriteria, int skip, int take);
     }
 }
