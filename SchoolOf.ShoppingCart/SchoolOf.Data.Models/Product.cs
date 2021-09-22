@@ -14,5 +14,6 @@ namespace SchoolOf.Data.Models
         public decimal Price { get; set; }
         public string Category { get; set; }
         public string Image { get; set; }
+        public List<Cart> Carts { get; set; }
     }
 }

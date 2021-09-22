@@ -8,8 +8,7 @@ namespace SchoolOf.Common.Exceptions
 {
     public class InvalidParameterException : Exception
     {
-        public InvalidParameterException(int parameter)
-            : base(String.Format("Invalid Value Parameter: {0}", parameter))
+        public InvalidParameterException(string message) : base(message)
         {
 
         }

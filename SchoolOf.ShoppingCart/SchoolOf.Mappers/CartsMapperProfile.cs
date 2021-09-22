@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace SchoolOf.Mappers
 {
-    public class OrdersMapperProfile : Profile
+    public class CartsMapperProfile : Profile
     {
-        public OrdersMapperProfile()
+        public CartsMapperProfile()
         {
-            CreateMap<Order, OrderDto>();
+            CreateMap<Cart, CartDto>()
+                .ForMember(destination => destination.Status, x => x.MapFrom(source => source.Status.ToString()));
         }
     }
 }

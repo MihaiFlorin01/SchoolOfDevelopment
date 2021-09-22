@@ -27,8 +27,6 @@ namespace SchoolOf.ShoppingCart.Controllers
         [ProducesResponseType(typeof(IEnumerable<ProductDto>), 200)]
         public async Task<IActionResult> GetProducts()
         {
-            //throw new System.Exception();
-
             var myListOfProducts = new List<ProductDto>();
             var productsFromDb = this._unitOfWork.GetRepository<Product>().Find(product => !product.IsDeleted);
 
@@ -55,11 +53,11 @@ namespace SchoolOf.ShoppingCart.Controllers
         {
             if (pageNumber < 1)
             {
-                throw new InvalidParameterException(pageNumber);
+                throw new InvalidParameterException("Invalid page number argument. Should be greater than 0.");
             }
-            if (pageSize < 0)
+            if (pageSize < 1)
             {
-                throw new InvalidParameterException(pageSize);
+                throw new InvalidParameterException("Invalid page size argument. Should be greater than 0");
             }
 
             var productsFromDb = this._unitOfWork.GetRepository<Product>().Find(product => !product.IsDeleted, (pageNumber - 1) * pageSize, pageSize);
