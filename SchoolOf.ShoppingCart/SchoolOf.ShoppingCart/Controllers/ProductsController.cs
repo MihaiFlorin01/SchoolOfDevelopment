@@ -17,10 +17,11 @@ namespace SchoolOf.ShoppingCart.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+
         public ProductsController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this._unitOfWork = unitOfWork;
-            this._mapper = mapper;
+            _mapper = mapper;
         }
 
         [HttpGet]
