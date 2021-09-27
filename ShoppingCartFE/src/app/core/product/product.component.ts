@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 
 @Component({
@@ -9,7 +9,7 @@ import { Product } from 'src/app/model/product';
 export class ProductComponent implements OnInit {
 
   @Input()
-  product: Product | undefined;
+  product!: Product;
 
   constructor() { }
 

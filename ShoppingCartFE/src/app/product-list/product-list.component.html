@@ -1,10 +1,12 @@
-<div>
-    <ng-container *ngFor="let product of products">
-      <img
-      id="base64ImageForDisplay"
-      alt="Preview Image"
-      width="400"
-      src="data:image/png;base64,{{product.image}}">
-      <!-- {{product.name + '\n' + product.description + '\n' + product.price + '\n' + product.category}} -->
-    </ng-container>
+<div class="container">
+  <div class="row m-5">
+    <h1>Products</h1>
   </div>
+  <div class="row">
+  <ng-container *ngFor="let product of products">
+    <div class="col-xs-12 col-md-6">
+    <app-product [product]="product"></app-product>
+    </div>
+  </ng-container>
+  </div>
+</div>
