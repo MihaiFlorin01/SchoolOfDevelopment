@@ -1,37 +1,18 @@
-<div class="prod-info-main prod-wrap clearfix">
+<div class="d-flex justify-content-center">
+  <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-12 col-xs-12">
-        <div class="product-image">
-          <img src="data:image/png;base64,{{product.image}}" class="img-responsive rotprod">
-        </div>
-      </div>
-      <div class="col-md-7 col-sm-12 col-xs-12">
-        <div class="product-detail">
-          <h5 class="name">
-            <a href="#">
-              {{product.name}}
-            </a>
-            <a href="#">
-              <span>{{product.category}}</span>
-            </a>
-
-          </h5>
-          <p class="price-container">
-            <span>{{product.price  | currency : 'USD':'symbol-narrow':'4.0' }}</span>
-          </p>
-          <span class="tag1"></span>
-        </div>
-        <div class="description">
-          <p>{{product.description | elipsis : 100}}</p>
-        </div>
-        <div class="product-info smart-form">
-          <div appBackground class="row" color="gray">
-            <div class="col-md-12">
-              <a href="javascript:void(0);" class="btn btn-danger btn-cart"><span>Add to cart</span></a>
-              <a href="javascript:void(0);" class="btn btn-info"><span>More info</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="col-sm-6 col-md-3"><b>Id:</b> {{product.id}}</div>
+      <div class="col-sm-6 col-md-3"><b>Name:</b>{{product.name}}</div>
+      <div class="col-sm-6 col-md-3"><b>Category:</b>{{product.category}}</div>
+      <div class="col-sm-6 col-md-3"><b>Price:</b>{{product.price}}</div>
     </div>
+    <div>{{product.description}}</div>
+    <img class="col-6" [border]="1" src="data:image/jpeg;base64,{{product.image}}"/>
   </div>
+</div>  
+<ng-container *ngIf="renderType === 'list'">
+  <div class="d-flex justify-content-center pt-3 pb-5">
+    <button (click)="selectProd(product.id)">select</button>
+    <a [routerLink]="['details']" [queryParams]="{ productId: product.id }" class="px-2"><button>view details</button></a>
+  </div>
+</ng-container>

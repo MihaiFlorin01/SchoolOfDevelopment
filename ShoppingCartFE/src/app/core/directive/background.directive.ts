@@ -1,11 +1,10 @@
-import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input , HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appBackground]'
 })
-export class BackgroundDirective implements OnInit {
-
-  @Input() color!: string;
+export class BackgroundDirective  {
+  @Input() color: string = 'red';
 
   constructor(private el: ElementRef) { }
 
@@ -13,13 +12,16 @@ export class BackgroundDirective implements OnInit {
     this.el.nativeElement.style.backgroundColor = this.color;
   }
 
-  @HostListener('mouseover')
-  onMouseOver() {
-    this.el.nativeElement.style.backgroundColor = 'blue';
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.color);
   }
 
-  @HostListener('mouseout')
-  onMouseOut() {
-    this.el.nativeElement.style.backgroundColor =  'white';
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight('');
   }
+
+  private highlight(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+
 }
