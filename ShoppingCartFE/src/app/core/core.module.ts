@@ -5,6 +5,8 @@ import { ProductComponent } from './product/product.component';
 import { BackgroundDirective } from './directive/background.directive';
 import { RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -13,7 +15,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ElipsisPipe,
     ProductComponent,
     BackgroundDirective,
-    ErrorPageComponent
+    ErrorPageComponent,
+    CartComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,
